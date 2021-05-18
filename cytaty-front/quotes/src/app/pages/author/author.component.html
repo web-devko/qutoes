@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Temat</h1>
+
+  <div class="block short">
+    <h4>Szukaj poprzez temat </h4>
+    <h4 class="letter">ALL</h4>
+    <h4 class="letter" *ngFor="let letter of letterTopic">{{ letter }}</h4>
+  </div>
+
+  <div class="block">
+
+    <div class="left">
+      <app-author-cover
+      *ngFor="let letter of letterTopic"
+      [param]="letter"
+      >
+      </app-author-cover>
+    </div>
+
+    <div class="right">
+      <h3> Popularne tematy </h3>
+      <div *ngFor="let author of allAuthors | async" class="popular-topic">
+        <p>{{author.quotesAuthorEntity_name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

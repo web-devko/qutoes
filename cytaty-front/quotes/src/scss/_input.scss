@@ -1,0 +1,20 @@
+@import '/src/scss/variable';
+
+@mixin input($width, $height) {
+    height: $height;
+    width: $width;
+    background: $dirty-white;
+    border-radius: 40px;
+    border: solid 3.5px $cream-white;
+    padding: 0 15px;
+}
+
+@mixin button($width, $height) {
+    height: $height;
+    width: $width;
+    border-radius: 40px;
+    border: none;
+    color: $dirty-white;
+    background: $dark-blue;
+    margin-top: 20px;
+}

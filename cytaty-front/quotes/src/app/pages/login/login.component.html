@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="inputs">
+
+    <h1>LOGOWANIE</h1>
+    <form action="" #form="ngForm" (ngSubmit)="authLogin()">
+      <div class="input">
+        <label for="">Login</label>
+        <input type="text" [(ngModel)]="model.email" name="email">
+      </div>
+
+      <div class="input">
+        <label for="">Hasło</label>
+        <input type="password" [(ngModel)]="model.pwd" name="pwd">
+      </div>
+
+      <button>Zaloguj</button>
+    </form>
+
+  </div>
+</div>

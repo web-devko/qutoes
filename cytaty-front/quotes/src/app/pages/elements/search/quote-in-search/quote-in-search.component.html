@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Wszystkie cytaty {{information}}</h1>
+  <h1>{{information}}</h1>
+  <app-quote-cover
+  *ngFor="let quote of quotes | async"
+  [quote]="quote"
+  >
+  </app-quote-cover>
+</div>

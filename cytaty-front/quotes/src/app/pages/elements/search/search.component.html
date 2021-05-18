@@ -1,0 +1,47 @@
+  <form class="search" #form="ngForm">
+    <img class="loupe" [src]="loupe" alt="search" (click)="redirectTo('/szukaj/' + text)">
+  <input type="text" placeholder="Wpisz fraze cytatu"
+  [(ngModel)]="text" name="text"
+  (keyup.enter)="redirectTo('/szukaj/' + text)"
+  >
+  <div class="more-button" (click)="show = !show">
+    <img class="more"  [src]="dots" alt="more">
+  </div>
+</form>
+
+<div class="search-advanced" [class.active]="show">
+
+<form #form="ngForm">
+
+  <!-- <select class="select" [(ngModel)]="model.topic" name="topic" required>
+    <ng-template ngFor let-topic [ngForOf]="allTopics | async">
+      <option *ngFor="let t of topic.quotesTopicEntity_name">{{t}}</option>
+    </ng-template>
+  </select> -->
+
+  <!-- <select class="select" [(ngModel)]="model.author" name="author" required>
+    <ng-template ngFor let-author [ngForOf]="allAuthors | async">
+      <option *ngFor="let t of author.quotesAuthorEntity_name">{{t}}</option>
+    </ng-template>
+  </select> -->
+
+  <select class="select" [(ngModel)]="model.author" name="author" required>
+      <option *ngFor="let t of allAuthors | async">{{t.quotesAuthorEntity_name}}</option>
+  </select>
+
+
+  <select class="select" [(ngModel)]="model.topic" name="author" required>
+    <option *ngFor="let t of allTopics | async">{{t.quotesTopicEntity_name}}</option>
+  </select>
+
+
+  <select class="select" [(ngModel)]="model.year" name="year" required>
+    <option *ngFor="let year of years">{{year}}</option>
+  </select>
+
+  <button [disabled]="form.invalid"
+    [routerLink]="['/wyszukane', model.author, model.topic, model.year]">Szukaj</button>
+</form>
+
+</div>
+<!-- model.topic, -->

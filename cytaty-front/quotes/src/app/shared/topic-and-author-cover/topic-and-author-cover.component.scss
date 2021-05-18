@@ -1,0 +1,51 @@
+@import '/src/scss/variable';
+
+.topic-block {
+  width: 210px;
+  height: 180px;
+  background: white;
+  border: solid 4px #D6D6D6;
+  border-radius: 40px;
+  background: #E5E5E5;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.letters {
+  background: #ADBAC7;
+  border-radius: 40px;
+  height: 25%;
+  margin-bottom: 10px;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.t-l {
+  color: $dark-blue;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.more {
+  color: #F3F4F4;
+}
+
+.text {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+.l-block {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E5E5E5;
+  border-radius: 40px;
+  border: solid 4px #ADBAC7;
+}

@@ -1,0 +1,9 @@
+<div class="topic-block">
+  <div class="letters">
+    <p class="t-l  l-block">{{param}}</p>
+    <p class="more">Więcej</p>
+  </div>
+  <p class="text" *ngFor="let author of authors | async" [routerLink]="['/autor', author.quotesAuthorEntity_name]">
+    {{author.quotesAuthorEntity_name}}
+  </p>
+</div>

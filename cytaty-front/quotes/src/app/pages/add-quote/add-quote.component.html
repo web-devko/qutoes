@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="inputs">
+
+    <h1>Dodawanie cytatu</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+
+
+      <div class="input">
+        <label for="">Autor</label>
+        <select class="form-control" formControlName="author" >
+          <option *ngFor="let author of allAuthors | async" [value]="author.quotesAuthorEntity_id">{{ author.quotesAuthorEntity_name }}</option>
+        </select>
+      </div>
+
+      <div class="input">
+        <label for="">Temat</label>
+        <select class="form-control" formControlName="topic" >
+          <option *ngFor="let topic of allTopics | async" [value]="topic.quotesTopicEntity_id">{{ topic.quotesTopicEntity_name }}</option>
+        </select>
+      </div>
+
+      <div class="input">
+        <label for="">Rok</label>
+        <select class="form-control" formControlName="year" >
+          <option *ngFor="let year of allYears" [value]="year">{{ year }}</option>
+        </select>
+      </div>
+
+
+      <div class="input">
+        <label for="">Cytat</label>
+        <input class="form-control" placeholder="" formControlName="quote">
+      </div>
+
+
+      <div class="input">
+        <label for="">Zdjęcia</label>
+        <input class="input-file" type="file" (change)="uploadFile($event)">
+      </div>
+
+
+      <button>Dodaj cytat</button>
+    </form>
+
+  </div>
+</div>

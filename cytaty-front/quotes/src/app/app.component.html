@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+<button
+mat-fab
+color="primary"
+aria-label="Example icon button with a bookmark icon"
+*ngIf="authenticated"
+routerLink='/dodaj-cytat'
+>
+  <mat-icon>add</mat-icon>
+</button>
+<app-footer></app-footer>

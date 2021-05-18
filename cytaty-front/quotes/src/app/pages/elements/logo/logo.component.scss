@@ -1,0 +1,19 @@
+@import '/src/scss/variable';
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $dark-blue;
+}
+
+.logo-text h1 {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: .3px;
+}
+
+.logo-text h3 {
+  letter-spacing: .9px;
+  margin-top: -5px;
+}

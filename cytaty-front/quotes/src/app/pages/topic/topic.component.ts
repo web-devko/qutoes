@@ -15,7 +15,7 @@ export class TopicComponent implements OnInit {
     private httpTopic: HttpGetTopicService,
     ) {}
 
-  letterTopic = [ 'B', 'D', 'E', 'T' ];
+    letterTopic = [ 'A', 'C', 'D', 'I', 'L' ];
 
   allTopics!: Observable<Topic[]>;
 

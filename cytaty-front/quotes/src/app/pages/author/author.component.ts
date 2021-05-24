@@ -14,7 +14,7 @@ export class AuthorComponent implements OnInit {
     private httpAuthor: HttpGetAuthorService,
     ) {}
 
-  letterTopic = [ 'B', 'D', 'E', 'T' ];
+  letterTopic = [ 'A', 'C', 'D', 'I', 'L' ];
 
   allAuthors!: Observable<Author[]>;
 
